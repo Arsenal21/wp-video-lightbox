@@ -4,7 +4,7 @@ Donate link: https://www.tipsandtricks-hq.com/
 Tags: wordpress lightbox, wordpress video lightbox, video lightbox, wp video lightbox, wordpress video embed, add video to wordpress, gallery, image, images, lightbox, lightview, overlay, photo, photos, picture, video  
 Requires at least: 3.0
 Tested up to: 4.9
-Stable tag: 1.8.6
+Stable tag: 1.8.7
 License: GPLv2 or later
 
 Very easy to use WordPress lightbox plugin to display YouTube and Vimeo videos in an elegant lightbox overlay.
@@ -114,7 +114,7 @@ None
 
 == Changelog ==
 
-= WIP 1.8.7
+= 1.8.7
 * Youtube autoplay is working now.
 * Fixed close button was partially positioned behind the lightbox.
 * Fixed play button img was inheriting box-shadow from theme.
