@@ -118,6 +118,7 @@ None
 * Youtube autoplay is working now.
 * Fixed close button was partially positioned behind the lightbox.
 * Fixed play button img was inheriting box-shadow from theme.
+* Fixed PHP notices on settings page.
 
 = 1.8.6 =
 * Added a fix so a search engine bot cannot access the video lightbox directory.

@@ -71,7 +71,7 @@ class Video_Lightbox_Settings_Page
                     wp_die('Error! Nonce Security Check Failed! Go back to general menu and save the settings again.');
             }
             
-            update_option('wpvl_enable_jquery', ($_POST["enable_jquery"]=='1')?'1':'');
+            update_option('wpvl_enable_jquery', (isset($_POST["enable_jquery"]))?'1':'');
             
             echo '<div id="message" class="updated fade"><p><strong>';
             echo __('prettyPhoto Settings Updated!', 'wp-video-lightbox');
@@ -117,28 +117,28 @@ class Video_Lightbox_Settings_Page
                     wp_die('Error! Nonce Security Check Failed! Go back to prettyPhoto menu and save the settings again.');
             }            
             $wpvl_prettyPhoto = WP_Video_Lightbox_prettyPhoto::get_instance();
-            update_option('wpvl_enable_prettyPhoto', ($_POST["enable_prettyPhoto"]=='1')?'1':'');
+            update_option('wpvl_enable_prettyPhoto', (isset($_POST["enable_prettyPhoto"]))?'1':'');
             $wpvl_prettyPhoto->animation_speed = trim($_POST["animation_speed"]);
             $wpvl_prettyPhoto->slideshow = trim($_POST["slideshow"]);
-            $wpvl_prettyPhoto->autoplay_slideshow = ($_POST["autoplay_slideshow"]=='1')?'true':'false';
+            $wpvl_prettyPhoto->autoplay_slideshow = (isset($_POST["autoplay_slideshow"]))?'true':'false';
             $wpvl_prettyPhoto->opacity = trim($_POST["opacity"]);
-            $wpvl_prettyPhoto->show_title = ($_POST["show_title"]=='1')?'true':'false';
-            $wpvl_prettyPhoto->allow_resize = ($_POST["allow_resize"]=='1')?'true':'false';
-            $wpvl_prettyPhoto->allow_expand = ($_POST["allow_expand"]=='1')?'true':'false';
+            $wpvl_prettyPhoto->show_title = (isset($_POST["show_title"]))?'true':'false';
+            $wpvl_prettyPhoto->allow_resize = (isset($_POST["allow_resize"]))?'true':'false';
+            $wpvl_prettyPhoto->allow_expand = (isset($_POST["allow_expand"]))?'true':'false';
             $wpvl_prettyPhoto->default_width = trim($_POST["default_width"]);
             $wpvl_prettyPhoto->default_height = trim($_POST["default_height"]);
             $wpvl_prettyPhoto->counter_separator_label = trim($_POST["counter_separator_label"]);
             $wpvl_prettyPhoto->theme = trim($_POST["theme"]);
             $wpvl_prettyPhoto->horizontal_padding = trim($_POST["horizontal_padding"]);
-            $wpvl_prettyPhoto->hideflash = ($_POST["hideflash"]=='1')?'true':'false';
+            $wpvl_prettyPhoto->hideflash = (isset($_POST["hideflash"]))?'true':'false';
             $wpvl_prettyPhoto->wmode = trim($_POST["wmode"]);
-            $wpvl_prettyPhoto->autoplay = ($_POST["autoplay"]=='1')?'true':'false';
-            $wpvl_prettyPhoto->modal = ($_POST["modal"]=='1')?'true':'false';
-            $wpvl_prettyPhoto->deeplinking = ($_POST["deeplinking"]=='1')?'true':'false';
-            $wpvl_prettyPhoto->overlay_gallery = ($_POST["overlay_gallery"]=='1')?'true':'false';
+            $wpvl_prettyPhoto->autoplay = (isset($_POST["autoplay"]))?'true':'false';
+            $wpvl_prettyPhoto->modal = (isset($_POST["modal"]))?'true':'false';
+            $wpvl_prettyPhoto->deeplinking = (isset($_POST["deeplinking"]))?'true':'false';
+            $wpvl_prettyPhoto->overlay_gallery = (isset($_POST["overlay_gallery"]))?'true':'false';
             $wpvl_prettyPhoto->overlay_gallery_max = trim($_POST["overlay_gallery_max"]);
-            $wpvl_prettyPhoto->keyboard_shortcuts = ($_POST["keyboard_shortcuts"]=='1')?'true':'false';
-            $wpvl_prettyPhoto->ie6_fallback = ($_POST["ie6_fallback"]=='1')?'true':'false';
+            $wpvl_prettyPhoto->keyboard_shortcuts = (isset($_POST["keyboard_shortcuts"]))?'true':'false';
+            $wpvl_prettyPhoto->ie6_fallback = (isset($_POST["ie6_fallback"]))?'true':'false';
             
             WP_Video_Lightbox_prettyPhoto::save_object($wpvl_prettyPhoto);
             
